@@ -21,4 +21,4 @@ After you cloned the repository to your docker server we'll be building the dock
 ##Installing new modules
 Now this is a bit tricky since we're running the hubot command to start the container if we stop it the container will die. Meaning that we can't use shell commands anymore.
 Well the solution, I pull this repo to my local machine and use the npm install <PLUGINHERE> there then push it and restart the container.
-Don't forget to add it in your package.json file.
+Don't forget to add it in your `external-scripts.json` file.
