@@ -1,5 +1,8 @@
 # Hubot JARVIS
 
+## Disclaimer
+This has absolutely nothing to do with other personal assistent projects called jarvis, I just liked the name Jarvis for a bot.
+
 ## What is Hubot Jarvis?
 Jarvis is a slack hubot in a container, for more information about hubot go [here](hubot.github.com)
 This was created for a project involving Jenkins and Slack, feel free to modify whatever you want but **this won't be updated anymore.**
