@@ -23,7 +23,7 @@ You have to do this on a machine that has [npm and nodejs](https://nodejs.org/en
 After you cloned the repository to your docker server we'll be building the docker image`docker build -t [id]\hubot .` 
 Or you can just **pull the image from my dockerhub "tourna/hubot"**
 
-1. run the docker container `docker run -d --env-file env.list -v ~/hubot-jarvis/jarvis:/opt/botdir tourna/hubot`
+1. run the docker container `docker run -d -p 8080:8080 --env-file env.list -v ~/hubot-jarvis/jarvis:/opt/botdir tourna/hubot`. If you want the correct date and time inside the container add the flag `-v /etc/localtime:/etc/localtime:ro`
 
 2. It's entirely possible that you have to `chmod u+x ~/hubot-jarvis/jarvis/bin/hubot`, you might have to do this for your **node_modules map** aswell
 
@@ -37,6 +37,5 @@ Don't forget to add it in your `external-scripts.json` file.
 Go the folder of your hubot in this case jarvis, run `npm install <scriptname>`, afterwards add the module name to the external-scripts file. Like the jenkins plugin is present.
 Afterwards you restart the container and the new plugin should be available.
 
-## Docker run
-`docker run -d --env-file env.list -p 8080:8080 -v /home/jenkins/hubot-jarvis/jarvis:/opt/botdir tourna/hubot`
-If you want the correct date and time inside the container add the flag `-v /etc/localtime:/etc/localtime:ro`
+## env.list
+Use the env.list file to add the environment variables required inside the container so that hubot can connect and use all your required scripts.
