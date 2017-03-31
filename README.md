@@ -2,6 +2,7 @@
 
 ## What is Hubot Jarvis?
 Jarvis is a slack hubot in a container, for more information about hubot go [here](hubot.github.com)
+This was created for a project involving Jenkins and Slack, feel free to modify whatever you want but this won't be updated anymore.
 
 ## Preparation
 we'll be creating the huBot files before we link it to the container through a volume, personally I prefer this over copying the files inside the container. 
